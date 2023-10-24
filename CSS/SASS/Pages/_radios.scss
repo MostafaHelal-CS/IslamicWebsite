@@ -1,0 +1,166 @@
+.landing {
+    .container {
+        .radios {
+            padding-top: 20px;
+            .radioContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                & > div {
+                    width: 50%;
+                    height: 50vh;
+                    @media #{$maxSmallScreen} {
+                        width: 100%;
+                        height: 30vh;
+                    }
+                }
+                @media #{$maxSmallScreen} {
+                    flex-wrap: wrap-reverse;
+                    padding: 20px 0 0 ;
+                }
+                .qaree {
+                    text-align: right;
+                    background-color: $mainColor;
+                    overflow: auto;
+                    direction: ltr;
+                    .qaraaData {
+                        padding: 10px 20px;
+                        border-bottom: 2px solid #FFF;
+                        cursor: pointer;
+                        &.clicked {
+                            background-color: $altColor;
+                            color: rgba(0 0 0/ 0.7);
+                        }
+                    }
+                    .qareename {
+                        color: #FFF;
+                        font-size: 16px;
+                    }
+                }
+                .radioIcon {
+                    background-color: $altColor;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    &::before , &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 0;
+                        height: 0;
+                        border-radius: 50%;
+                    }
+                    &::before {
+                        border: 2px solid $mainColor;
+                        animation: rotateCycle 4s infinite linear alternate-reverse both;
+                    }
+                    &::after {
+                        border: 2px solid #fff;
+                        animation: rotateCycle 3s infinite linear alternate-reverse both;
+                    }
+                    .radio {
+                        font-size: 100px;
+                        color: rgba(0 0 0/ 0.9);
+                        animation-name: animatIcon;
+                        animation-duration: 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation: animatIcon 4s infinite linear;
+                        position: relative;
+                        z-index: 10;
+                    }
+                }
+            }
+            @media #{$maxSmallScreen} {
+                flex-wrap: wrap-reverse;
+                padding: 0;
+            }
+            .radioControl {
+                padding: 20px;
+                @media #{$maxSmallScreen} {
+                    padding: 20px 0 10px;   
+                }
+                audio {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+
+@keyframes rotateCycle {
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    25%{
+        width:120px;
+        height: 120px;
+    }
+    50%{
+        width: 150px;
+        height: 150px;
+    }
+    75%{
+        width: 170px;
+        height: 170px;
+    }
+    100%{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@keyframes animatIcon {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@media #{$maxSmallScreen} {
+    .landing .container .radios .radioContainer .radioIcon .radio {
+        font-size: 50px;
+    }
+    @keyframes rotateCycle {
+        0%{
+            width: 75px;
+            height: 75px;
+        }
+        25%{
+            width:100px;
+            height: 100px;
+        }
+        50%{
+            width: 125px;
+            height: 125px;
+        }
+        75%{
+            width: 150px;
+            height: 150px;
+        }
+        100%{
+            width: 175px;
+            height: 175px;
+        }
+    }
+}

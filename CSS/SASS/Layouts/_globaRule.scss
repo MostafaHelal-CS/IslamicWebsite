@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    @include prefixers(box-sizing , border-box  ,webkit moz);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b2dbfb;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    @media #{$minSmallScreem} {
+        width: 750px;
+    }
+
+    @media #{$minMediumScreem} {
+        width: 970px;
+    }
+
+    @media #{$minLargeScreem} {
+        width: 1170px;
+    }
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    height:100vh;
+    width: 100vw;
+    background-image: url('../Images/bg1.png');
+    z-index: 2000;
+    background-color: #FFF;
+    .logo__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        
+        .logo-image {
+            width: 70px;
+            height: 70px;
+            padding: 2px;
+            border-left: 2px solid $mainColor;
+            border-top: 2px solid $mainColor;
+            border-radius: 50%;
+            animation-name: loading;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: none;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Start headroom.js part */
+.headroom--pinned {
+    display: block;
+}
+.headroom--unpinned {
+    display: none;
+}
+/* End headroom.js part */

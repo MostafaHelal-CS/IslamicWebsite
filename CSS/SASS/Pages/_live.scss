@@ -1,0 +1,26 @@
+.landing {
+    .container {
+        .live {
+            padding-top: 20px;
+            @include prefixers(display , flex , webkit moz o ms);
+            justify-content: center;
+            align-items: center;
+
+            .video-js {
+                background-color: #FFF !important;
+                @media (max-width:400px) {
+                    height: 185px;
+                }
+            }
+
+            video {
+                padding: 10px;
+                background-color: rgba(0 0 0/ 0.1);
+                @media (max-width:40px) {
+                    padding: 0;
+                    background-color: rgba(0 0 0/ 0.1);
+                }
+            }
+        }
+    }
+}

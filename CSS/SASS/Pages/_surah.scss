@@ -1,0 +1,92 @@
+.landing {
+    .container {
+        .surahs{
+            padding-top: 20px;
+            overflow: hidden;
+            &.toggleBtn {
+                display: none;
+            }
+            .surah {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                background-color: #f4f4f4;
+                box-shadow: 0 0 2px #0c84e4;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transition: 0.3s ease-in-out;
+                color: rgba(0 0 0/ 1);
+                cursor: pointer;
+                font-family: 'Aref Ruqaa', serif;
+                padding: 5px 10px;
+                float: right;
+                width: (94% / 3);
+                margin-right: 2%;
+                @media #{$maxMediumScreen} {
+                    width:(96% / 2);
+                }
+                @media (max-width:576px) {
+                    width: 100%;
+                }
+                &:hover {
+                    background-color: #0c84e4;
+                    color: #FFF;
+                }
+                .surahByArabic ,
+                .surahByEng {
+                    text-align: start;
+                    font-size: 20px;
+                    @media #{$maxSmallScreen} {
+                        font-size: 14px;
+                    }
+                    .surahArabicName ,
+                    .surahEngName {
+                        margin-bottom: 10px;
+                    }
+                }
+                .surahByEng bdi {
+                    display: block;
+                }
+            }
+        }
+        .surahContent {
+            .surahText {
+                line-height: 2;
+                font-size: 18px;
+                text-align: start;
+                padding: 0 10px;
+                .nameSurahText {
+                    position: relative;
+                    .sname {
+                        text-align: center;
+                        margin-bottom: 10px;
+                        font-size: 25px;
+                        color: #fff;
+                        width: fit-content;
+                        margin: 10px auto;
+                        background-color: #0c84e4;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        padding: 5px 15px;
+                        position: relative;
+                        z-index: 10;
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        right: 0;
+                        top: 50%;
+                        width: 100%;
+                        height: 4px;
+                        background-color: #0c84e4;
+                        z-index: 1;
+                    }
+                }
+            }
+            .ayahDiv {
+                display: inline;
+            }
+        }
+    }
+}

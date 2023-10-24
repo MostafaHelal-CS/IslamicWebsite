@@ -1,0 +1,54 @@
+.landing {
+    .container {
+        .tafasir {
+            display: flex;
+            align-items: flex-end;
+            gap: 2%;
+            background-color: #1F305E;
+            padding: 10px;
+            border-radius: 8px;
+            @media #{$maxSmallScreen} {
+                flex-wrap: wrap-reverse;
+            }
+            .surahsTafasir {
+                width: 35%;
+                position: relative;
+                text-align: right;
+                height: 50vh;
+                background-color: #FFF;
+                color: $mainColor;
+                overflow: auto;
+                border-radius: 8px;
+                @media #{$maxSmallScreen} {
+                    width: 100%;
+                    height: 30vh;
+                }
+                p{
+                    line-height: 2;
+                    border-bottom: 1px solid $mainColor;
+                    padding: 5px 20px;
+                    transition: 0.35 ease-in-out;
+                    font-size: 14px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #1F305E;
+                        color: #FFF;
+                    }
+                }
+            }
+            .tafasirAudio {
+                width: 100%;
+                audio {
+                    width: 100%;
+                }
+                .tafasirHeading {
+                    font-size: 50px;
+                    font-family: 'Aref Ruqaa', serif;
+                    color: #FFF;
+                    line-height: 40vh;
+                }
+            }
+            
+        }
+    }
+}

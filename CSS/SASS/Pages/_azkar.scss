@@ -1,0 +1,118 @@
+.landing {
+    .container {
+        .azkar {
+            padding-top: 20px;
+            .azkarType {
+                text-align: right;
+                p {
+                    font-size: 26px;
+                    color: rgba(0 0 0/ 0.7);
+                    /* font-family: 'Aref Ruqaa', serif; */
+                    position: relative;
+                    padding: 10px 20px;
+                    background-color: #f9f9f9;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #f4f4f4;
+                    }
+                    &p::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        border-width: 10px;
+                        border-style: solid;
+                        border-color: transparent #0c84e4 transparent transparent;
+                    }
+                }
+            }
+            .headEle {
+                position: relative;
+                width: 100%;
+                z-index: 1;
+                margin-bottom: 40px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width:100%;
+                    top: 50%;
+                    left: 0;
+                    height: 4px;
+                    background-color: #0c84e4;
+                    z-index: -1;
+                }
+            }
+            .azkarheading {
+                font-family: 'Aref Ruqaa', serif;
+                color: #FFF;
+                background-color: #0c84e4;
+                width: fit-content;
+                margin: auto;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .AzkarElsabah {
+                .alAzkar{
+                    margin-bottom: 40px;
+                    border: 1px solid #333;
+                    border-radius: 5px;
+                    padding: 30px 20px 0;
+                    position: relative;
+                    counter-increment: count;
+                    text-align: right;
+                    &::before {
+                        content: counter(count);
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 60px;
+                        height: 40px;
+                        background-color:#EEE ;
+                        color: #0c84e4;
+                        font-weight: bold;
+                        font-size: 18px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .zekr {
+                        list-style: none;
+                        li {
+                            line-height: 2;
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: rgba(0 0 0/ 0.7);
+                            margin-bottom: 10px;
+                            span {
+                                background-color: #f4f4f4;
+                                padding: 2px 8px;
+                                display: inline-block;
+                                margin-bottom: 10px;
+                                color: #0c84e4;
+                                border-radius: 4px;
+                                margin-left: 20px;
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 100%;
+                                    border-width: 10px;
+                                    border-style: solid;
+                                    border-color: transparent #0c84e4 transparent transparent;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

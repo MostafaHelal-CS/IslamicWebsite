@@ -1,0 +1,112 @@
+.landing {
+    .container {
+        .hadaith {
+            .hadaithHeading {
+                font-size: 30px;
+                font-family: 'Aref Ruqaa', serif;
+                color: rgba(0 0 0/ 0.6);
+                margin-bottom: 20px;
+            }
+            .hadaithBook {
+                text-align: right;
+                margin: 20px auto;
+                &.toggleBtn {
+                    display: none;
+                }
+                .hadaithname {
+                    background-color: $mainColor;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    color: #FFF;
+                    font-size: 18px;
+                    font-family: 'Aref Ruqaa', serif;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+                    &:hover {
+                        background-color: #1F305E;
+                    }
+                }
+            }
+            .hadaithsection {
+                text-align: left;
+                .sectiontitle {
+                    font-size: 18px;
+                    background-color: #f1f1f1;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    direction: ltr;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #f9f9f9;
+                        color: #0c84e4;
+                    }
+                }
+            }
+            .hadaithBox {
+                text-align: right;
+                border-radius: 8px;
+                border: 1px solid #333;
+                position: relative;
+                counter-increment: count;
+                margin-bottom: 40px;
+                padding: 20px 0 0;
+                margin-top: 30px;
+                .hadithtext {
+                    font-size: 18px;
+                    line-height: 2;
+                    word-spacing: 3px;
+                    font-family:  tahoma;
+                    padding: 10px 20px 10px;
+                    border-bottom: 1px solid #333;
+                    &.no__border {
+                        border-bottom: none;
+                    }
+                }
+                &::before {
+                    content: counter(count);
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                    width: 60px;
+                    height: 40px;
+                    background-color: #EEE;
+                    color: #0c84e4;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .grades {
+                    text-align: left;
+                    direction: ltr;
+                    padding: 10px 20px;
+                    &.toggleBtn {
+                        display: none;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        line-height: 2;
+                        thead {
+                            th {
+                                font-size: 20px;
+                                color: #0c84e4;
+                            }
+                        }
+                        tr:not(:last-child){
+                            border-bottom: 2px solid #ddd;
+                            border-top: 2px solid #ddd;
+                            border-collapse: collapse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

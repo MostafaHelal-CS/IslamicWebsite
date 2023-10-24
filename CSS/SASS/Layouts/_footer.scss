@@ -1,0 +1,43 @@
+.footer {
+    text-align: center;
+    padding: 10px 0;  
+    background-color: $altColor; 
+    .owner {
+        font-size: 22px;
+        font: {
+            family: 'Aref Ruqaa', serif;
+            weight: bold;
+        }
+        color: $mainColor;
+        margin-bottom: 15px;
+    }
+    .social-links {
+        list-style: none;
+        @include prefixers(display , flex , webkit moz o ms);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        li {
+            a {
+                i{
+                    font-size: 26px;
+                    &.facebook {
+                        color: #1877f2;
+                    }
+                    &.whatsapp {
+                        color: #25d366;
+                    }
+                    &.linkedin {
+                        color: #0a66c2;
+                    }
+                    &.github {
+                        color: #333;
+                    }
+                    &.mail {
+                        color: #168de2;
+                    }
+                }
+            }
+        }
+    }
+}

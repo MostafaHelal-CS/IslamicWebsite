@@ -1,0 +1,106 @@
+/* Start Header*/
+.header {
+    background-color:$mainColor;
+    border-bottom: 2px solid #FFF;
+    .container {
+        @include prefixers(display , flex , webkit moz o ms);
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 60px;
+        max-height: 75px;
+        padding: 15px 20px;
+        .heading {
+            color: #b2dbfb;
+            font-size: 20px;
+            font-weight: bold;
+            word-spacing: 6px;
+            transition: 0.3s ease-in-out;
+            font-family: 'Aref Ruqaa', serif;
+            width: 30%;
+            &:hover {
+                color: #FFF;
+            }
+            @media #{$maxSmallScreen} {
+                font-size: 16px;
+            }
+        }
+        .nav_links {
+            flex: 1;
+            @include prefixers(display , flex , webkit moz o ms);
+            justify-content: flex-end;
+            align-items: center;
+            .toggler {
+                width: 30px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                display: none;
+                cursor: pointer;
+                span {
+                    height: 3px;
+                    display: block;
+                    background-color: #FFF;
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+                @media #{$maxMediumScreen} {
+                    display: block;
+                }
+            }
+            .links {
+                list-style: none;
+                @include prefixers(display , flex , webkit moz o ms);
+                justify-content: flex-end;
+                width: 100%;
+                li {
+                    list-style: none;
+                    display: block;
+                    transition: 0.3s ease-in-out;
+                    margin-left: 20px;
+                    a {
+                        text-decoration: none;
+                        color: #b2dbfb;
+                        font-weight: 500;
+                        font-size: 18px;
+                        transition: 0.3s ease-in-out;
+                        &:hover , &.active {
+                            color: #FFF;
+                        }
+                    }
+                }
+                @media #{$maxMediumScreen} {
+                    display: none;
+                    &.openNavLinks {
+                        display: block;
+                        position: absolute;
+                        top: calc(100% + 1px);
+                        right: 0;
+                        z-index: 1000;
+                        background: #0c84e4;
+                        width: 100%;
+                        padding: 10px;
+                        font-family: 'Aref Ruqaa', serif;
+                        transition: 0.3s ease-in-out;
+                        li {
+                            margin-left: 0;
+                            padding: 6px;
+                            background-color:#1F305E ;
+                            &:not(:last-child) {
+                                margin-bottom: 5px;
+                            }
+                            a {
+                                color: #FFF;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* End Header*/

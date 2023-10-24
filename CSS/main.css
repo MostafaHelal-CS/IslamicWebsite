@@ -1,0 +1,1182 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Clicker+Script&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Sacramento&family=Spectral:ital,wght@0,300;1,200;1,300&family=Tangerine:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b2dbfb;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../Images/bg1.png");
+  z-index: 2000;
+  background-color: #FFF;
+}
+.loading .logo__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading .logo__box .logo-image {
+  width: 70px;
+  height: 70px;
+  padding: 2px;
+  border-left: 2px solid #0c84e4;
+  border-top: 2px solid #0c84e4;
+  border-radius: 50%;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.loading .logo__box .logo-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: none;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Start headroom.js part */
+.headroom--pinned {
+  display: block;
+}
+
+.headroom--unpinned {
+  display: none;
+}
+
+/* End headroom.js part */
+#scrollToTop {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: #0c84e4;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 100;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: none;
+}
+
+/* Start Header*/
+.header {
+  background-color: #0c84e4;
+  border-bottom: 2px solid #FFF;
+}
+.header .container {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  max-height: 75px;
+  padding: 15px 20px;
+}
+.header .container .heading {
+  color: #b2dbfb;
+  font-size: 20px;
+  font-weight: bold;
+  word-spacing: 6px;
+  transition: 0.3s ease-in-out;
+  font-family: "Aref Ruqaa", serif;
+  width: 30%;
+}
+.header .container .heading:hover {
+  color: #FFF;
+}
+@media (max-width:768px) {
+  .header .container .heading {
+    font-size: 16px;
+  }
+}
+.header .container .nav_links {
+  flex: 1;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .container .nav_links .toggler {
+  width: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+}
+.header .container .nav_links .toggler span {
+  height: 3px;
+  display: block;
+  background-color: #FFF;
+}
+.header .container .nav_links .toggler span:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media (max-width:992px) {
+  .header .container .nav_links .toggler {
+    display: block;
+  }
+}
+.header .container .nav_links .links {
+  list-style: none;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.header .container .nav_links .links li {
+  list-style: none;
+  display: block;
+  transition: 0.3s ease-in-out;
+  margin-left: 20px;
+}
+.header .container .nav_links .links li a {
+  text-decoration: none;
+  color: #b2dbfb;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+.header .container .nav_links .links li a:hover, .header .container .nav_links .links li a.active {
+  color: #FFF;
+}
+@media (max-width:992px) {
+  .header .container .nav_links .links {
+    display: none;
+  }
+  .header .container .nav_links .links.openNavLinks {
+    display: block;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    z-index: 1000;
+    background: #0c84e4;
+    width: 100%;
+    padding: 10px;
+    font-family: "Aref Ruqaa", serif;
+    transition: 0.3s ease-in-out;
+  }
+  .header .container .nav_links .links.openNavLinks li {
+    margin-left: 0;
+    padding: 6px;
+    background-color: #1F305E;
+  }
+  .header .container .nav_links .links.openNavLinks li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  .header .container .nav_links .links.openNavLinks li a {
+    color: #FFF;
+    padding: 0 10px;
+  }
+}
+
+/* End Header*/
+.landing {
+  min-height: calc(100vh - 65px);
+  text-align: center;
+  background-image: url("../Images/bg1.png");
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+.landing .container {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width:768px) {
+  .landing .container {
+    width: 100%;
+  }
+}
+.landing .container .secHeading {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.landing .container .secHeading::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #0c84e4;
+  z-index: -1;
+}
+.landing .container .secHeading .heading {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  color: #FFF;
+  background-color: #0c84e4;
+  padding: 10px 20px;
+  font-weight: 500;
+  word-spacing: 4px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Aref Ruqaa", serif;
+  border-radius: 10px;
+}
+@media (max-width:768px) {
+  .landing .container .secHeading .heading {
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .landing .container {
+    padding: 10px;
+  }
+}
+
+.landing .container .allquranParts {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+.landing .container .allquranParts.toggleBtn {
+  display: none;
+}
+@media (max-width:768px) {
+  .landing .container .allquranParts {
+    padding-top: 20px;
+  }
+}
+.landing .container .allquranParts .part {
+  float: right;
+  width: 18%;
+  background-color: #0c84e4;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  margin-right: 2%;
+}
+@media (max-width:768px) {
+  .landing .container .allquranParts .part {
+    width: 48%;
+  }
+}
+.landing .container .allquranParts .part .juzLink {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+  font-family: "Aref Ruqaa", serif;
+}
+@media (max-width:768px) {
+  .landing .container .allquranParts .part .juzLink {
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+}
+.landing .container .juzContent {
+  padding-top: 20px;
+  text-align: right;
+  line-height: 2;
+  font-size: 18px;
+  padding-right: 15px;
+  width: 100%;
+}
+.landing .container .juzContent.toggleBtn {
+  display: none;
+}
+@media (max-width:768px) {
+  .landing .container .juzContent {
+    padding-top: 20px;
+  }
+}
+.landing .container .juzContent .surahname {
+  background-color: #F4f4f4;
+  text-align: center;
+  color: #0c84e4;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: 0.3s ease-in-out;
+}
+.landing .container .juzContent .surahname:hover {
+  background-color: #0c84e4;
+  color: #FFF;
+}
+.landing .container .juzContent span {
+  width: 100%;
+}
+.landing .container .juzContent .nextAndPreviousBtn {
+  text-align: center;
+  padding-top: 20px;
+}
+.landing .container .juzContent .nextAndPreviousBtn .next, .landing .container .juzContent .nextAndPreviousBtn .previous {
+  width: 40px;
+  height: 40px;
+  background-color: #b2dbfb;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.landing .container .surahs {
+  padding-top: 20px;
+  overflow: hidden;
+}
+.landing .container .surahs.toggleBtn {
+  display: none;
+}
+.landing .container .surahs .surah {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 2px #0c84e4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-family: "Aref Ruqaa", serif;
+  padding: 5px 10px;
+  float: right;
+  width: 31.3333333333%;
+  margin-right: 2%;
+}
+@media (max-width:992px) {
+  .landing .container .surahs .surah {
+    width: 48%;
+  }
+}
+@media (max-width: 576px) {
+  .landing .container .surahs .surah {
+    width: 100%;
+  }
+}
+.landing .container .surahs .surah:hover {
+  background-color: #0c84e4;
+  color: #FFF;
+}
+.landing .container .surahs .surah .surahByArabic,
+.landing .container .surahs .surah .surahByEng {
+  text-align: start;
+  font-size: 20px;
+}
+@media (max-width:768px) {
+  .landing .container .surahs .surah .surahByArabic,
+  .landing .container .surahs .surah .surahByEng {
+    font-size: 14px;
+  }
+}
+.landing .container .surahs .surah .surahByArabic .surahArabicName,
+.landing .container .surahs .surah .surahByArabic .surahEngName,
+.landing .container .surahs .surah .surahByEng .surahArabicName,
+.landing .container .surahs .surah .surahByEng .surahEngName {
+  margin-bottom: 10px;
+}
+.landing .container .surahs .surah .surahByEng bdi {
+  display: block;
+}
+.landing .container .surahContent .surahText {
+  line-height: 2;
+  font-size: 18px;
+  text-align: start;
+  padding: 0 10px;
+}
+.landing .container .surahContent .surahText .nameSurahText {
+  position: relative;
+}
+.landing .container .surahContent .surahText .nameSurahText .sname {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  background-color: #0c84e4;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px 15px;
+  position: relative;
+  z-index: 10;
+}
+.landing .container .surahContent .surahText .nameSurahText::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #0c84e4;
+  z-index: 1;
+}
+.landing .container .surahContent .ayahDiv {
+  display: inline;
+}
+
+.landing .container .pages {
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+.landing .container .pages.toggleBtn {
+  display: none;
+}
+.landing .container .pages .inputContainer {
+  width: 100%;
+  text-align: start;
+  margin-bottom: 20px;
+}
+.landing .container .pages .inputContainer input {
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  background-color: #b2dbfb;
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+@media (max-width:768px) {
+  .landing .container .pages .inputContainer input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.landing .container .pages .inputContainer input[type=submit] {
+  cursor: pointer;
+}
+.landing .container .pages .inputContainer .inputNumber::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.landing .container .pages .inputContainer .inputNumber:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.landing .container .pages .surahname {
+  font-size: 28px;
+  font-weight: 500;
+  color: #0c84e4;
+  margin-bottom: 10px;
+}
+.landing .container .pages .pageContent {
+  line-height: 2;
+  text-align: start;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+.landing .container .pages .pageContent span {
+  font-size: 18px;
+}
+.landing .container .pages .pageContent .nextAndPreviousBtn {
+  text-align: center;
+  padding-top: 20px;
+}
+.landing .container .pages .pageContent .nextAndPreviousBtn .next, .landing .container .pages .pageContent .nextAndPreviousBtn .previous {
+  width: 40px;
+  height: 40px;
+  background-color: #b2dbfb;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.landing .container .sajdaPart {
+  padding: 20px 10px 0;
+}
+.landing .container .sajdaPart .sajda {
+  text-align: right;
+  line-height: 2;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  margin-bottom: 10px;
+}
+@media (max-width:768px) {
+  .landing .container .sajdaPart .sajda {
+    font-size: 14px;
+  }
+}
+
+.landing .container .surahsAudioContainer {
+  padding-top: 20px;
+}
+.landing .container .surahsAudioContainer .ayaControl {
+  width: 100%;
+  background-color: #0c84e4;
+  padding: 30px 20px;
+  border-radius: 8px;
+}
+.landing .container .surahsAudioContainer .ayaControl .selectListeningMode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.landing .container .surahsAudioContainer .ayaControl .selectListeningMode button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+.landing .container .surahsAudioContainer .ayaControl .selectListeningMode button.listeningEffect {
+  background-color: #b2dbfb;
+}
+.landing .container .surahsAudioContainer .ayaControl .selectListeningMode button:hover {
+  background-color: #b2dbfb;
+  color: #FFF;
+}
+.landing .container .surahsAudioContainer .ayaControl .ayaha {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+.landing .container .surahsAudioContainer .ayaControl .audioControl {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.landing .container .surahsAudioContainer .ayaControl .controlBtns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.landing .container .surahsAudioContainer .ayaControl .controlBtns button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #0c84e4;
+}
+.landing .container .surahsAudioContainer .ayaControl .controlBtns button i {
+  font-size: 30px;
+  color: #FFF;
+}
+.landing .container .surahsAudioContainer .allSurahsContent {
+  padding-top: 40px;
+  text-align: right;
+}
+.landing .container .surahsAudioContainer .allSurahsContent .surahContent {
+  background-color: #b2dbfb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 18px;
+}
+.landing .container .surahsAudioContainer .allSurahsContent .surahContent.surahEffect {
+  background-color: #0c84e4;
+  color: #FFF;
+}
+.landing .container .surahsAudioContainer .allSurahsContent .surahContent:hover {
+  background-color: #0c84e4;
+  color: #FFF;
+}
+.landing .container .surahsAudioContainer .allSurahsContent .surahContent .surahName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.landing .container .radios {
+  padding-top: 20px;
+}
+.landing .container .radios .radioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.landing .container .radios .radioContainer > div {
+  width: 50%;
+  height: 50vh;
+}
+@media (max-width:768px) {
+  .landing .container .radios .radioContainer > div {
+    width: 100%;
+    height: 30vh;
+  }
+}
+@media (max-width:768px) {
+  .landing .container .radios .radioContainer {
+    flex-wrap: wrap-reverse;
+    padding: 20px 0 0;
+  }
+}
+.landing .container .radios .radioContainer .qaree {
+  text-align: right;
+  background-color: #0c84e4;
+  overflow: auto;
+  direction: ltr;
+}
+.landing .container .radios .radioContainer .qaree .qaraaData {
+  padding: 10px 20px;
+  border-bottom: 2px solid #FFF;
+  cursor: pointer;
+}
+.landing .container .radios .radioContainer .qaree .qaraaData.clicked {
+  background-color: #b2dbfb;
+  color: rgba(0, 0, 0, 0.7);
+}
+.landing .container .radios .radioContainer .qaree .qareename {
+  color: #FFF;
+  font-size: 16px;
+}
+.landing .container .radios .radioContainer .radioIcon {
+  background-color: #b2dbfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.landing .container .radios .radioContainer .radioIcon::before, .landing .container .radios .radioContainer .radioIcon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+}
+.landing .container .radios .radioContainer .radioIcon::before {
+  border: 2px solid #0c84e4;
+  animation: rotateCycle 4s infinite linear alternate-reverse both;
+}
+.landing .container .radios .radioContainer .radioIcon::after {
+  border: 2px solid #fff;
+  animation: rotateCycle 3s infinite linear alternate-reverse both;
+}
+.landing .container .radios .radioContainer .radioIcon .radio {
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.9);
+  animation-name: animatIcon;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation: animatIcon 4s infinite linear;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width:768px) {
+  .landing .container .radios {
+    flex-wrap: wrap-reverse;
+    padding: 0;
+  }
+}
+.landing .container .radios .radioControl {
+  padding: 20px;
+}
+@media (max-width:768px) {
+  .landing .container .radios .radioControl {
+    padding: 20px 0 10px;
+  }
+}
+.landing .container .radios .radioControl audio {
+  width: 100%;
+}
+
+@keyframes rotateCycle {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  25% {
+    width: 120px;
+    height: 120px;
+  }
+  50% {
+    width: 150px;
+    height: 150px;
+  }
+  75% {
+    width: 170px;
+    height: 170px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+@keyframes animatIcon {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media (max-width:768px) {
+  .landing .container .radios .radioContainer .radioIcon .radio {
+    font-size: 50px;
+  }
+  @keyframes rotateCycle {
+    0% {
+      width: 75px;
+      height: 75px;
+    }
+    25% {
+      width: 100px;
+      height: 100px;
+    }
+    50% {
+      width: 125px;
+      height: 125px;
+    }
+    75% {
+      width: 150px;
+      height: 150px;
+    }
+    100% {
+      width: 175px;
+      height: 175px;
+    }
+  }
+}
+.landing .container .live {
+  padding-top: 20px;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .container .live .video-js {
+  background-color: #FFF !important;
+}
+@media (max-width: 400px) {
+  .landing .container .live .video-js {
+    height: 185px;
+  }
+}
+.landing .container .live video {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 40px) {
+  .landing .container .live video {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.landing .container .tafasir {
+  display: flex;
+  align-items: flex-end;
+  gap: 2%;
+  background-color: #1F305E;
+  padding: 10px;
+  border-radius: 8px;
+}
+@media (max-width:768px) {
+  .landing .container .tafasir {
+    flex-wrap: wrap-reverse;
+  }
+}
+.landing .container .tafasir .surahsTafasir {
+  width: 35%;
+  position: relative;
+  text-align: right;
+  height: 50vh;
+  background-color: #FFF;
+  color: #0c84e4;
+  overflow: auto;
+  border-radius: 8px;
+}
+@media (max-width:768px) {
+  .landing .container .tafasir .surahsTafasir {
+    width: 100%;
+    height: 30vh;
+  }
+}
+.landing .container .tafasir .surahsTafasir p {
+  line-height: 2;
+  border-bottom: 1px solid #0c84e4;
+  padding: 5px 20px;
+  transition: 0.35 ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
+}
+.landing .container .tafasir .surahsTafasir p:hover {
+  background-color: #1F305E;
+  color: #FFF;
+}
+.landing .container .tafasir .tafasirAudio {
+  width: 100%;
+}
+.landing .container .tafasir .tafasirAudio audio {
+  width: 100%;
+}
+.landing .container .tafasir .tafasirAudio .tafasirHeading {
+  font-size: 50px;
+  font-family: "Aref Ruqaa", serif;
+  color: #FFF;
+  line-height: 40vh;
+}
+
+.landing .container .hadaith .hadaithHeading {
+  font-size: 30px;
+  font-family: "Aref Ruqaa", serif;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+.landing .container .hadaith .hadaithBook {
+  text-align: right;
+  margin: 20px auto;
+}
+.landing .container .hadaith .hadaithBook.toggleBtn {
+  display: none;
+}
+.landing .container .hadaith .hadaithBook .hadaithname {
+  background-color: #0c84e4;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #FFF;
+  font-size: 18px;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.landing .container .hadaith .hadaithBook .hadaithname:hover {
+  background-color: #1F305E;
+}
+.landing .container .hadaith .hadaithsection {
+  text-align: left;
+}
+.landing .container .hadaith .hadaithsection .sectiontitle {
+  font-size: 18px;
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr;
+  cursor: pointer;
+}
+.landing .container .hadaith .hadaithsection .sectiontitle:hover {
+  background-color: #f9f9f9;
+  color: #0c84e4;
+}
+.landing .container .hadaith .hadaithBox {
+  text-align: right;
+  border-radius: 8px;
+  border: 1px solid #333;
+  position: relative;
+  counter-increment: count;
+  margin-bottom: 40px;
+  padding: 20px 0 0;
+  margin-top: 30px;
+}
+.landing .container .hadaith .hadaithBox .hadithtext {
+  font-size: 18px;
+  line-height: 2;
+  word-spacing: 3px;
+  font-family: tahoma;
+  padding: 10px 20px 10px;
+  border-bottom: 1px solid #333;
+}
+.landing .container .hadaith .hadaithBox .hadithtext.no__border {
+  border-bottom: none;
+}
+.landing .container .hadaith .hadaithBox::before {
+  content: counter(count);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 40px;
+  background-color: #EEE;
+  color: #0c84e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.landing .container .hadaith .hadaithBox .grades {
+  text-align: left;
+  direction: ltr;
+  padding: 10px 20px;
+}
+.landing .container .hadaith .hadaithBox .grades.toggleBtn {
+  display: none;
+}
+.landing .container .hadaith .hadaithBox .grades table {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 2;
+}
+.landing .container .hadaith .hadaithBox .grades table thead th {
+  font-size: 20px;
+  color: #0c84e4;
+}
+.landing .container .hadaith .hadaithBox .grades table tr:not(:last-child) {
+  border-bottom: 2px solid #ddd;
+  border-top: 2px solid #ddd;
+  border-collapse: collapse;
+}
+
+.landing .container .azkar {
+  padding-top: 20px;
+}
+.landing .container .azkar .azkarType {
+  text-align: right;
+}
+.landing .container .azkar .azkarType p {
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.7);
+  /* font-family: 'Aref Ruqaa', serif; */
+  position: relative;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.landing .container .azkar .azkarType p:hover {
+  background-color: #f4f4f4;
+}
+.landing .container .azkar .azkarType pp::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #0c84e4 transparent transparent;
+}
+.landing .container .azkar .headEle {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.landing .container .azkar .headEle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background-color: #0c84e4;
+  z-index: -1;
+}
+.landing .container .azkar .azkarheading {
+  font-family: "Aref Ruqaa", serif;
+  color: #FFF;
+  background-color: #0c84e4;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+.landing .container .azkar .AzkarElsabah .alAzkar {
+  margin-bottom: 40px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 30px 20px 0;
+  position: relative;
+  counter-increment: count;
+  text-align: right;
+}
+.landing .container .azkar .AzkarElsabah .alAzkar::before {
+  content: counter(count);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 40px;
+  background-color: #EEE;
+  color: #0c84e4;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .container .azkar .AzkarElsabah .alAzkar .zekr {
+  list-style: none;
+}
+.landing .container .azkar .AzkarElsabah .alAzkar .zekr li {
+  line-height: 2;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+.landing .container .azkar .AzkarElsabah .alAzkar .zekr li span {
+  background-color: #f4f4f4;
+  padding: 2px 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #0c84e4;
+  border-radius: 4px;
+  margin-left: 20px;
+  position: relative;
+}
+.landing .container .azkar .AzkarElsabah .alAzkar .zekr li span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #0c84e4 transparent transparent;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #b2dbfb;
+}
+.footer .owner {
+  font-size: 22px;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: bold;
+  color: #0c84e4;
+  margin-bottom: 15px;
+}
+.footer .social-links {
+  list-style: none;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer .social-links li a i {
+  font-size: 26px;
+}
+.footer .social-links li a i.facebook {
+  color: #1877f2;
+}
+.footer .social-links li a i.whatsapp {
+  color: #25d366;
+}
+.footer .social-links li a i.linkedin {
+  color: #0a66c2;
+}
+.footer .social-links li a i.github {
+  color: #333;
+}
+.footer .social-links li a i.mail {
+  color: #168de2;
+}/*# sourceMappingURL=main.css.map */

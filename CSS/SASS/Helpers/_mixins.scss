@@ -1,0 +1,7 @@
+@mixin prefixers($propertyName , $propertyValue ,$prefixes) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix +"-" +$propertyName} : $propertyValue;
+    }
+
+    #{$propertyName} : $propertyValue;
+}

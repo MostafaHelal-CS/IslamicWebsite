@@ -1,0 +1,85 @@
+.landing{
+    .container {
+        .allquranParts {
+            position: relative;
+            overflow: hidden;
+            padding-top: 40px;
+            &.toggleBtn{
+                display: none;
+            }
+            @media #{$maxSmallScreen} {
+                padding-top: 20px;
+            }
+            .part {
+                float:right;
+                width: calc(90% / 5);
+                background-color:$mainColor;
+                margin-bottom: 2%;
+                border-radius: 5px;
+                margin-right: 2%;
+                @media #{$maxSmallScreen} {
+                    width: calc(96% / 2);
+                }
+                .juzLink {
+                    color: #FFF;
+                    font-size: 20px;
+                    font-weight: 500;
+                    display: block;
+                    padding: 20px;
+                    cursor: pointer;
+                    font-family: 'Aref Ruqaa', serif;
+                    @media #{$maxSmallScreen} {
+                        font-size: 14px; 
+                        padding: 10px 5px;  
+                    }
+                }
+            }
+        }
+        .juzContent {
+            padding-top: 20px;
+            text-align: right;
+            line-height: 2;
+            font-size: 18px;
+            padding-right: 15px;
+            width: 100%;
+            &.toggleBtn {
+                display: none;
+            }
+            @media #{$maxSmallScreen} {
+                padding-top: 20px;
+            }
+            .surahname {
+                background-color: #F4f4f4;
+                text-align: center;
+                color: #0c84e4;
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    background-color: #0c84e4;
+                    color: #FFF;
+                }
+            }
+            span {
+                width: 100%;
+            }
+            .nextAndPreviousBtn {
+                    text-align: center;
+                    padding-top: 20px;
+                    .next , .previous {
+                        width: 40px;
+                        height: 40px;
+                        background-color: $altColor;
+                        text-align: center;
+                        line-height: 40px;
+                        margin-left: 10px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        color: rgba(0 0 0/ 0.7);
+                    }
+                }
+        }
+    } 
+} 

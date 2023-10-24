@@ -1,0 +1,71 @@
+.landing {
+    .container {
+        .pages {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            &.toggleBtn {
+                display: none;
+            }
+            .inputContainer {
+                width: 100%;
+                text-align: start;
+                margin-bottom: 20px;
+                input {
+                    border: none;
+                    outline: none;
+                    padding: 8px 16px;
+                    background-color: #b2dbfb;
+                    color: rgba(0 0 0/ 0.5);
+                    border-radius: 8px;
+                    font-size: 18px;
+                    margin-left: 10px;
+                    @media #{$maxSmallScreen} {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                    &[type="submit"] {
+                        cursor: pointer;
+                    }
+                }
+                .inputNumber::-webkit-input-placeholder {
+                    color: rgba(0 0 0/ 0.5);
+                }
+                .inputNumber:focus::-webkit-input-placeholder {
+                    opacity: 0;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+            .surahname {
+                font-size: 28px;
+                font-weight: 500;
+                color: #0c84e4;
+                margin-bottom: 10px;
+            }
+            .pageContent {
+                line-height: 2;
+                text-align: start;
+                padding: 10px;
+                background-color: #f9f9f9;
+                span {
+                    font-size: 18px;
+                }
+                .nextAndPreviousBtn {
+                    text-align: center;
+                    padding-top: 20px;
+                    .next , .previous {
+                        width: 40px;
+                        height: 40px;
+                        background-color: $altColor;
+                        text-align: center;
+                        line-height: 40px;
+                        margin-left: 10px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        color: rgba(0 0 0/ 0.7);
+                    }
+                }
+            }
+        }
+    }
+}

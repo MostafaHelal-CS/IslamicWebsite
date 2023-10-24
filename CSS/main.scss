@@ -1,0 +1,34 @@
+// Import Vaiables File
+@import "./SASS/Helpers/variables";
+// Import Mixins File
+@import "./SASS/Helpers/mixins";
+// Import Global rule file
+@import "./SASS/Layouts/globaRule";
+// Import buttons File
+@import "./SASS/Components/buttons";
+// Import header file
+@import "./SASS/Layouts/header";
+// @import Landing File
+@import "./SASS/Layouts/landing";
+// Import juz page file
+@import "./SASS/Pages/juz";
+// Import surahs file
+@import "./SASS/Pages/surah";
+// Import Pages file
+@import "./SASS/Pages/page";
+// Import sajda file
+@import "./SASS/Pages/sajda";
+// Import listening file
+@import "./SASS/Pages/listening";
+// Import radio file
+@import "./SASS/Pages/radios";
+// Import live file
+@import "./SASS/Pages/live";
+// Import tafasir file
+@import "./SASS/Pages/tafasir";
+// Import hadaith file
+@import "./SASS/Pages/hadaith";
+// Import azkar file
+@import "./SASS/Pages/azkar";
+// Import footer file
+@import "./SASS/Layouts/footer";
